@@ -1,36 +1,31 @@
-<!doctype html>
-<html>
-    <head>
-        <link rel="stylesheet" href="./static/styles.css">
-        <meta charset="UTF-8">
-        <title>Skills-HTML-CSS</title>
-    </head>
-    <body>
-        <h1>Job Application Form</h1>
-        <h4>Please fill in the information below and submit to complete 
-            job application!</h4>
-        <form action="/application" method="POST">
-            <div>
-                First Name:
-                    <input type="text" class="boxes" name="firstname" >
-            </div>
-              <div>
-                <span>Last Name:</span>
-                    <input type="text" class="boxes" name="lastname">
-            </div>
-             <div>
-                Salary Requirement:
-                    <input type="number" min="20000" max="1000000" step="1000" class="boxes" name="salary">
-            </div>
-            <div>
-                Which job are you applying for:
-                    <input type="radio" name="job" value="Software Engineer">Software Engineer
-                    <input type="radio" name="job" value="QA Engineer">QA Engineer
-                    <input type="radio" name="job" value="Product Manager">Product Manager
-            </div>
-            <div>
-                <input type="submit" class="boxes">
-            </div>
-        </form>
-    </body>
-</html>
+{% extends 'base.html' %}
+
+{% block body %}
+
+    <h1>Job Application Form</h1>
+    <h4>Please fill in the information below and submit to complete 
+        job application!</h4>
+    <form action="/application" method="POST">
+        <div>
+            First Name:
+                <input type="text" class="boxes" name="firstname" >
+        </div>
+          <div>
+            <span>Last Name:</span>
+                <input type="text" class="boxes" name="lastname">
+        </div>
+         <div>
+            Salary Requirement:
+                <input type="number" min="20000" max="1000000" step="1000" class="boxes" name="salary">
+        </div>
+        <div>
+            Which job are you applying for:
+                <input type="radio" name="job" value="Software Engineer">Software Engineer
+                <input type="radio" name="job" value="QA Engineer">QA Engineer
+                <input type="radio" name="job" value="Product Manager">Product Manager
+        </div>
+        <div>
+            <input type="submit" class="boxes">
+        </div>
+    </form>
+{% endblock %}
