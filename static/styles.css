@@ -1,0 +1,9 @@
+.boxes{
+    background-color: #ffff80;
+}
+span {
+    font-weight: bold;
+}
+h4 {
+    border: 2px solid red; 
+}/*Your styles can go here.*/
